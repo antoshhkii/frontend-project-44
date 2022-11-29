@@ -4,9 +4,13 @@
   "description": "antoshkaKrut",
   "main": "index.js",
   "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antoshhkii/frontend-project-44.git"
@@ -16,8 +20,5 @@
   "bugs": {
     "url": "https://github.com/antoshhkii/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/antoshhkii/frontend-project-44#readme",
-  "dependencies": {
-    "npm": "^9.1.2"
-  }
+  "homepage": "https://github.com/antoshhkii/frontend-project-44#readme"
 }
