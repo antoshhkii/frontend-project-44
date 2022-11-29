@@ -10,7 +10,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antoshhkii/frontend-project-44.git"
@@ -20,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/antoshhkii/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/antoshhkii/frontend-project-44#readme"
+  "homepage": "https://github.com/antoshhkii/frontend-project-44#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
