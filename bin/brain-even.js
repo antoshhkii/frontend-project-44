@@ -1,8 +1,9 @@
 #!/usr/bin/env
 import greeting from '../src/cli.js';
 import {
-  magicNumbers, answerForm, question, checkAnswer,
+  answerForm, question, checkAnswer,
 } from '../src/index.js';
+import { magicNumbers } from '../src/math.js';
 
 const even = () => {
   const name = greeting();
@@ -13,7 +14,7 @@ const even = () => {
     const userAnswer = answerForm(randomNumber, 'string');
     const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
 
-    if (checkAnswer(userAnswer, correctAnswer, name, attempt)) break;
+    if (!checkAnswer(userAnswer, correctAnswer, name, attempt)) break;
   }
 };
 even();
