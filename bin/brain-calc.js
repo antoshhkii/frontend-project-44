@@ -3,6 +3,7 @@ import greeting from '../src/cli.js';
 import {
   magicNumbers, getOperator, answerForm, checkAnswer,
 } from '../src/index.js';
+import { basicMath } from '../src/math.js';
 
 const name = greeting();
 
@@ -11,21 +12,22 @@ const calc = () => {
 
   for (let i = 0; i < 3; i += 1) {
     const currentOperator = getOperator(['+', '-', '*']);
-    const operands = magicNumbers(2);
-    const problem = `${operands[0]} ${currentOperator} ${operands[1]}`;
-    const userAnswer = parseInt(answerForm(problem), 10);
+    const x = magicNumbers();
+    const y = magicNumbers();
+    const problem = `${x} ${currentOperator} ${y}`;
+    const userAnswer = answerForm(problem);
     let correctAnswer = 0;
     switch (currentOperator) {
       case '+':
-        correctAnswer = operands[0] + operands[1];
+        correctAnswer = basicMath(x, y, '+');
         break;
 
       case '-':
-        correctAnswer = operands[0] - operands[1];
+        correctAnswer = basicMath(x, y, '-');
         break;
 
       case '*':
-        correctAnswer = operands[0] * operands[1];
+        correctAnswer = basicMath(x, y, '*');
         break;
 
       default:

@@ -6,9 +6,12 @@ export const getOperator = (array) => {
   return operator;
 };
 
-export const answerForm = (variable) => {
+export const answerForm = (variable, dataType) => {
   const result = readlineSync.question(`Question: ${variable} \nYour answer: `);
-  return result;
+  if (dataType === 'string') {
+    return result;
+  }
+  return parseInt(result, 10);
 };
 
 export const magicNumbers = (n = 1) => {
@@ -29,13 +32,13 @@ export const question = (str) => {
   console.log(str);
 };
 
-export const checkAnswer = (userAnswer, correctAnswer, name, iteration) => {
+export const checkAnswer = (userAnswer, correctAnswer, name, attempts) => {
   if (userAnswer === correctAnswer) {
     console.log('Correct!');
   } else {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`);
     return false;
   }
-  if (iteration === 2) console.log(`Congrulations, ${name}!`);
+  if (attempts === 2) console.log(`Congrulations, ${name}!`);
   return true;
 };
