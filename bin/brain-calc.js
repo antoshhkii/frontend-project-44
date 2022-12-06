@@ -1,6 +1,7 @@
+#!/usr/bin/env
 import greeting from '../src/cli.js';
 import {
-  magicNumbers, getOperator, answerForm, goodEnding, badEnding, trueSolve,
+  magicNumbers, getOperator, answerForm, checkAnswer,
 } from '../src/index.js';
 
 const name = greeting();
@@ -30,13 +31,7 @@ const calc = () => {
       default:
     }
 
-    if (userAnswer === correctAnswer) {
-      trueSolve();
-    } else {
-      badEnding(userAnswer, correctAnswer, name);
-      break;
-    }
-    goodEnding(name);
+    if (!checkAnswer(userAnswer, correctAnswer, name, i)) break;
   }
 };
 calc();

@@ -29,11 +29,13 @@ export const question = (str) => {
   console.log(str);
 };
 
-export const checkAnswer = (userAnswer, correctAnswer, name) => {
+export const checkAnswer = (userAnswer, correctAnswer, name, iteration) => {
   if (userAnswer === correctAnswer) {
     console.log('Correct!');
   } else {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`);
+    return false;
   }
+  if (iteration === 2) console.log(`Congrulations, ${name}!`);
   return true;
 };
