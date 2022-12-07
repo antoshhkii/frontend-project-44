@@ -15,6 +15,7 @@ const gcd = () => {
     const problem = `${x} ${y}`;
     const correctAnswer = divisor(x, y);
     const userAnswer = answerForm(problem);
+
     if (!checkAnswer(userAnswer, correctAnswer, name, attempts)) break;
   }
 };

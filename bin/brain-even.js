@@ -13,9 +13,9 @@ const even = () => {
     const randomNumber = magicNumbers();
     const userAnswer = answerForm(randomNumber, 'string');
     const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
-
     if (!checkAnswer(userAnswer, correctAnswer, name, attempt)) break;
   }
 };
+
 even();
 export default even;

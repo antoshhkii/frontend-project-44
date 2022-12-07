@@ -15,6 +15,7 @@ const progression = () => {
     const problem = prog(n, a);
     const userAnswer = answerForm(problem, 'string');
     const correctAnswer = progressionSolver(problem);
+
     if (!checkAnswer(userAnswer, correctAnswer, name, attempts)) break;
   }
 };
