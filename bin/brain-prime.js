@@ -1,7 +1,9 @@
 #!/usr/bin/env
+import greeting from '../src/cli.js';
 import { answerForm, question, checkAnswer } from '../src/index.js';
 import { isPrime, magicNumbers } from '../src/math.js';
 
+const name = greeting();
 const prime = (username) => {
   question('Answer "yes" if given number is prime. Otherwise answer "no".');
 
@@ -14,4 +16,5 @@ const prime = (username) => {
   }
 };
 
+prime(name);
 export default prime;

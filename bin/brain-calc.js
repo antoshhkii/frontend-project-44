@@ -1,6 +1,9 @@
 #!/usr/bin/env
+import greeting from '../src/cli.js';
 import { answerForm, checkAnswer, question } from '../src/index.js';
 import { getOperator, basicMath, magicNumbers } from '../src/math.js';
+
+const name = greeting();
 
 const calc = (username) => {
   question('What is the result of the expression?');
@@ -32,4 +35,5 @@ const calc = (username) => {
   }
 };
 
+calc(name);
 export default calc;

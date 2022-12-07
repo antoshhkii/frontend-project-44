@@ -1,7 +1,10 @@
 #!/usr/bin/env
 
+import greeting from '../src/cli.js';
 import { answerForm, question, checkAnswer } from '../src/index.js';
 import { magicNumbers } from '../src/math.js';
+
+const name = greeting();
 
 const even = (username) => {
   question('Answer "yes" if the number is even, otherwise answer "no".');
@@ -14,4 +17,5 @@ const even = (username) => {
   }
 };
 
+even(name);
 export default even;

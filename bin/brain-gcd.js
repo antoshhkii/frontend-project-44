@@ -1,7 +1,9 @@
 #!/usr/bin/env
+import greeting from '../src/cli.js';
 import { answerForm, question, checkAnswer } from '../src/index.js';
 import { magicNumbers, divisor } from '../src/math.js';
 
+const name = greeting();
 const gcd = (username) => {
   question('Find the greatest common divisor of given numbers.');
 
@@ -16,4 +18,5 @@ const gcd = (username) => {
   }
 };
 
+gcd(name);
 export default gcd;

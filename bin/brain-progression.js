@@ -1,7 +1,9 @@
 #!/usr/bin/env
+import greeting from '../src/cli.js';
 import { answerForm, question, checkAnswer } from '../src/index.js';
 import { magicNumbers, prog, progressionSolver } from '../src/math.js';
 
+const name = greeting();
 const progression = (username) => {
   question('What number is missing in the progression?');
 
@@ -16,4 +18,5 @@ const progression = (username) => {
   }
 };
 
+progression(name);
 export default progression;
