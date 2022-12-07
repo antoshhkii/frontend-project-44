@@ -19,6 +19,6 @@ export const checkAnswer = (userAnswer, correctAnswer, name, attempts) => {
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`);
     return false;
   }
-  if (attempts === 2) console.log(`Congrulations, ${name}!`);
+  if (attempts === 2) console.log(`Congratulations, ${name}!`);
   return true;
 };
