@@ -5,8 +5,7 @@ import { answerForm, question, checkAnswer } from '../src/index.js';
 import { isPrime, magicNumbers } from '../src/math.js';
 
 const prime = () => {
-  const username = greeting();
-  question('Answer "yes" if given number is prime. Otherwise answer "no".');
+  const username = greeting('Answer "yes" if given number is prime. Otherwise answer "no".');
 
   for (let attempts = 0; attempts < 3; attempts += 1) {
     const randomNumber = magicNumbers();

@@ -5,8 +5,7 @@ import { answerForm, question, checkAnswer } from '../src/index.js';
 import { magicNumbers, prog, progressionSolver } from '../src/math.js';
 
 const progression = () => {
-  const username = greeting();
-  question('What number is missing in the progression?');
+  const username = greeting('What number is missing in the progression?');
 
   for (let attempts = 0; attempts < 3; attempts += 1) {
     const n = magicNumbers();

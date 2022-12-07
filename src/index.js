@@ -14,11 +14,11 @@ export const question = (str) => {
 
 export const checkAnswer = (userAnswer, correctAnswer, name, attempts) => {
   if (userAnswer === correctAnswer) {
-    console.log('Correct!');
+    question('Correct!');
   } else {
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`);
+    question(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`);
     return false;
   }
-  if (attempts === 2) console.log(`Congratulations, ${name}!`);
+  if (attempts === 2) question(`Congratulations, ${name}!`);
   return true;
 };

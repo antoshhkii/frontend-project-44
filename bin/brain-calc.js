@@ -5,8 +5,7 @@ import { answerForm, checkAnswer, question } from '../src/index.js';
 import { getOperator, basicMath, magicNumbers } from '../src/math.js';
 
 const calc = () => {
-  const username = greeting();
-  question('What is the result of the expression?');
+  const username = greeting('What is the result of the expression?');
 
   for (let attempts = 0; attempts < 3; attempts += 1) {
     const currentOperator = getOperator(['+', '-', '*']);

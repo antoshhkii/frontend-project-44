@@ -5,8 +5,7 @@ import { answerForm, question, checkAnswer } from '../src/index.js';
 import { magicNumbers, divisor } from '../src/math.js';
 
 const gcd = () => {
-  const username = greeting();
-  question('Find the greatest common divisor of given numbers.');
+  const username = greeting('Find the greatest common divisor of given numbers.');
 
   for (let attempts = 0; attempts < 3; attempts += 1) {
     const x = magicNumbers();
