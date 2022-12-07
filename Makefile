@@ -1,7 +1,7 @@
 install:
 	npm ci
 link: 
-    npm link
+    sudo npm link
 publish:
 	npm publish --dry-run
 brain-games:
