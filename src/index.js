@@ -8,17 +8,17 @@ export const answerForm = (variable, dataType) => {
   return parseInt(result, 10);
 };
 
-export const question = (str) => {
+export const type = (str) => {
   console.log(str);
 };
 
 export const checkAnswer = (userAnswer, correctAnswer, name, attempts) => {
   if (userAnswer === correctAnswer) {
-    question('Correct!');
+    type('Correct!');
   } else {
-    question(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`);
+    type(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`);
     return false;
   }
-  if (attempts === 2) question(`Congratulations, ${name}!`);
+  if (attempts === 2) type(`Congratulations, ${name}!`);
   return true;
 };
