@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/env node
 
 import greeting from '../cli.js';
 import { answerForm, checkAnswer, question } from '../index.js';

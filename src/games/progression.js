@@ -1,5 +1,4 @@
-#!/usr/bin/env
-
+#!/usr/bin/env node
 import greeting from '../cli.js';
 import { answerForm, question, checkAnswer } from '../index.js';
 import { magicNumbers, prog, progressionSolver } from '../math.js';

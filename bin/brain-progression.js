@@ -1,22 +1,5 @@
-#!/usr/bin/env
-import greeting from '../src/cli.js';
-import { answerForm, question, checkAnswer } from '../src/index.js';
-import { magicNumbers, prog, progressionSolver } from '../src/math.js';
+#!/usr/bin/env node
 
-const name = greeting();
-const progression = (username) => {
-  question('What number is missing in the progression?');
+import progression from '../src/games/progression';
 
-  for (let attempts = 0; attempts < 3; attempts += 1) {
-    const n = magicNumbers();
-    const a = magicNumbers(2, 25);
-    const problem = prog(n, a);
-    const userAnswer = answerForm(problem, 'string');
-    const correctAnswer = progressionSolver(problem);
-
-    if (!checkAnswer(userAnswer, correctAnswer, username, attempts)) break;
-  }
-};
-
-progression(name);
-export default progression;
+progression();
