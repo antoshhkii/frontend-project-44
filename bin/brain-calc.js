@@ -1,16 +1,14 @@
 #!/usr/bin/env
-import greeting from '../src/cli.js';
-import { answerForm, checkAnswer } from '../src/index.js';
+import { answerForm, checkAnswer, question } from '../src/index.js';
 import { getOperator, basicMath, magicNumbers } from '../src/math.js';
 
-const calc = () => {
-  const name = greeting();
-  console.log('What is the result of the expression?');
+const calc = (username) => {
+  question('What is the result of the expression?');
 
-  for (let i = 0; i < 3; i += 1) {
+  for (let attempts = 0; attempts < 3; attempts += 1) {
     const currentOperator = getOperator(['+', '-', '*']);
-    const x = magicNumbers();
-    const y = magicNumbers();
+    const x = magicNumbers(2, 15);
+    const y = magicNumbers(2, 15);
     const problem = `${x} ${currentOperator} ${y}`;
     const userAnswer = answerForm(problem);
     let correctAnswer = 0;
@@ -30,9 +28,8 @@ const calc = () => {
       default:
     }
 
-    if (!checkAnswer(userAnswer, correctAnswer, name, i)) break;
+    if (!checkAnswer(userAnswer, correctAnswer, username, attempts)) break;
   }
 };
 
-calc();
 export default calc;

@@ -6,9 +6,7 @@ export const getOperator = (array) => {
 
 export const divisor = (x, y) => {
   const greatestNum = (x >= y) ? x : y;
-  console.log(greatestNum);
   const smallestNum = (x <= y) ? x : y;
-  console.log(smallestNum);
   let gcd = 1;
   for (let i = smallestNum; i > 0; i -= 1) {
     if ((greatestNum % i === 0) && (smallestNum % i === 0)) {
@@ -27,26 +25,17 @@ export const basicMath = (x, y, oper) => {
   return result;
 };
 
-export const magicNumbers = (n = 1, min = 1, max = 100) => {
-  const result = [];
-  let ordinary = 0;
+export const magicNumbers = (min = 1, max = 100) => {
   const minimal = Math.ceil(min);
   const maximum = Math.floor(max);
-  for (let i = 0; i < n; i += 1) {
-    const randomNumber = Math.floor(Math.random() * (maximum - minimal)) + minimal;
-    if (n === 1) {
-      ordinary = randomNumber;
-      return ordinary;
-    }
-    result.push(randomNumber);
-  }
-  return result;
+  const randomNumber = Math.floor(Math.random() * (maximum - minimal)) + minimal;
+  return randomNumber;
 };
 
 export const prog = (n, a) => {
   let result = '';
-  const length = magicNumbers(1, 5, 10);
-  const hidden = magicNumbers(1, 1, length - 1);
+  const length = magicNumbers(5, 10);
+  const hidden = magicNumbers(1, length - 1);
   for (let i = 0; i < length; i += 1) {
     const currentNum = (n + (a * i));
     result += (i !== hidden) ? `${currentNum} ` : '.. ';
