@@ -4,17 +4,17 @@ export const getOperator = (array) => {
   return operator;
 };
 
-export const divisor = (x, y) => {
-  const greatestNum = (x >= y) ? x : y;
-  const smallestNum = (x <= y) ? x : y;
-  let gcd = 1;
-  for (let i = smallestNum; i > 0; i -= 1) {
-    if ((greatestNum % i === 0) && (smallestNum % i === 0)) {
-      gcd = i;
-      break;
+export const getDivisor = (a, b) => {
+  let x = a;
+  let y = b;
+  while (x !== y) {
+    if (x > y) {
+      x -= y;
+    } else {
+      y -= x;
     }
   }
-  return gcd;
+  return x;
 };
 
 export const basicMath = (x, y, oper) => {
